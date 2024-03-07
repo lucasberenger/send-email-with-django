@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    <title>Sending Mails</title>
+</head>
+<body>
+    <h1 class="text-center">Sending emails with Django!</h1>
+    <div class="container m-5 gap-2">
+        <h2>{{ message_name }}, your message has been sent!</h2>
+        <a href="{% url 'myapp:home' %}"><button class="btn btn-primary m-2">send another email</button></a>
+    </div>
+</body>
+</html>

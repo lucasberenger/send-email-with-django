@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    <title>Sending Mails</title>
+</head>
+<body>
+    <h1 class="text-center">Sending emails with Django!</h1>
+    <form method="POST" action="" class="m-3">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label><br />
+            <input type="text" id="name" name="name" class="form-control"><br />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label><br />
+            <input type="text" id="email" name="email" class="form-control"><br />
+        </div>
+
+        <div class="mb-3">
+        <label for="message" class="form-label">Message:</label><br />
+        <textarea type="text" id="message" name="message" class="form-control" style="height: 100px;"></textarea> <br />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
